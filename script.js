@@ -7,7 +7,12 @@ function calculate() {
 
     let result;
 
-    if (operation === "add") {
+    // Secret cheat code 😎
+    if (number1 === 98 && number2 === 0 && operation === "subtract") {
+        result = "hi Pavan, tendi marda?";
+    }
+
+    else if (operation === "add") {
         result = number1 + number2;
     }
 
