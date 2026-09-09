@@ -7,23 +7,38 @@ function calculate() {
 
     let result;
 
-    // Secret cheat code 😎
+
+    // Secret Easter Egg 1 😎
     if (number1 === 98 && number2 === 0 && operation === "subtract") {
         result = "hi Pavan, tendi marda?";
     }
 
+
+    // Secret Easter Egg 2 😂
+    else if (number1 === 1098 && number2 === 0 && operation === "subtract") {
+        result = "r r royal challenger bhenke lode";
+    }
+
+
+    // Addition
     else if (operation === "add") {
         result = number1 + number2;
     }
 
+
+    // Subtraction
     else if (operation === "subtract") {
         result = number1 - number2;
     }
 
+
+    // Multiplication
     else if (operation === "multiply") {
         result = number1 * number2;
     }
 
+
+    // Division
     else if (operation === "divide") {
 
         if (number2 === 0) {
@@ -35,5 +50,7 @@ function calculate() {
         }
     }
 
+
+    // Display result
     document.getElementById("result").textContent = "Result: " + result;
 }
