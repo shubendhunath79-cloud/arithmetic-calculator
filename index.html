@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Arithmetic Calculator</title>
     <link rel="stylesheet" href="style.css">
@@ -7,34 +8,74 @@
 
 <body>
 
-    <h1>Arithmetic Calculator</h1>
+    <div class="calculator">
 
-    <label>First Number:</label>
-    <input type="number" id="number1" step="any">
+        <div class="header">
+            <h1>🧮 Arithmetic Calculator</h1>
+            <p>Simple • Fast • Powerful</p>
+        </div>
 
-    <br><br>
+        <div class="input-group">
 
-    <label>Second Number:</label>
-    <input type="number" id="number2" step="any">
+            <label for="number1">First Number</label>
+            <input type="number" id="number1" step="any" placeholder="Enter first number">
 
-    <br><br>
+        </div>
 
-    <label>Choose Operation:</label>
 
-    <select id="operation">
-        <option value="add">Addition (+)</option>
-        <option value="subtract">Subtraction (-)</option>
-        <option value="multiply">Multiplication (×)</option>
-        <option value="divide">Division (÷)</option>
-    </select>
+        <div class="input-group">
 
-    <br><br>
+            <label for="number2">Second Number</label>
+            <input type="number" id="number2" step="any" placeholder="Enter second number">
 
-    <button onclick="calculate()">Calculate</button>
+        </div>
 
-    <h2 id="result">Result will appear here</h2>
+
+        <div class="input-group">
+
+            <label for="operation">Choose Operation</label>
+
+            <select id="operation">
+                <option value="add">Addition (+)</option>
+                <option value="subtract">Subtraction (-)</option>
+                <option value="multiply">Multiplication (×)</option>
+                <option value="divide">Division (÷)</option>
+            </select>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button class="calculate-btn" onclick="calculate()">
+                Calculate
+            </button>
+
+            <button class="clear-btn" onclick="clearCalculator()">
+                Clear
+            </button>
+
+        </div>
+
+
+        <div class="result-box">
+
+            <p>Your Result</p>
+
+            <h2 id="result">Result will appear here</h2>
+
+        </div>
+
+
+        <div class="footer">
+            <p>Made with ❤️ while learning AI/ML</p>
+        </div>
+
+    </div>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
