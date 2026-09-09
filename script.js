@@ -8,33 +8,51 @@ function calculate() {
     let result;
 
 
-    // Secret Easter Egg 1 😎
-    if (number1 === 98 && number2 === 0 && operation === "subtract") {
-        result = "hi Pavan, tendi marda?";
+    // Check if numbers were entered
+    if (isNaN(number1) || isNaN(number2)) {
+
+        result = "Please enter both numbers!";
+
     }
 
 
-    // Secret Easter Egg 2 😂
+    // Easter Egg 1 😎
+    else if (number1 === 98 && number2 === 0 && operation === "subtract") {
+
+        result = "hi Pavan, tendi marda?";
+
+    }
+
+
+    // Easter Egg 2 😂
     else if (number1 === 1098 && number2 === 0 && operation === "subtract") {
-        result = "r r royal challenger bhenke lode";
+
+        result = "don't forgot to bring your bag";
+
     }
 
 
     // Addition
     else if (operation === "add") {
+
         result = number1 + number2;
+
     }
 
 
     // Subtraction
     else if (operation === "subtract") {
+
         result = number1 - number2;
+
     }
 
 
     // Multiplication
     else if (operation === "multiply") {
+
         result = number1 * number2;
+
     }
 
 
@@ -42,15 +60,33 @@ function calculate() {
     else if (operation === "divide") {
 
         if (number2 === 0) {
+
             result = "Cannot divide by zero!";
+
         }
 
         else {
+
             result = number1 / number2;
+
         }
+
     }
 
 
-    // Display result
     document.getElementById("result").textContent = "Result: " + result;
+}
+
+
+
+function clearCalculator() {
+
+    document.getElementById("number1").value = "";
+
+    document.getElementById("number2").value = "";
+
+    document.getElementById("operation").value = "add";
+
+    document.getElementById("result").textContent = "Result will appear here";
+
 }
